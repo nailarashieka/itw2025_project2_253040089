@@ -1,0 +1,87 @@
+:root {
+  --main-color: #380f17;
+}
+
+body {
+  font-family: "Archivo Black" sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--main-color);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar {
+  z-index: 3;
+}
+
+* {
+  z-index: 2;
+}
+
+.img-enha {
+  z-index: 1;
+}
+
+/* Home */
+
+.img-home {
+  height: 100%;
+  z-index: 1;
+}
+
+.home-tagline h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 72px;
+}
+
+.home-tagline p {
+  color: #fff;
+  font-size: 15px;
+  width: 90%;
+  line-height: 30px;
+}
+
+.button-primary {
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  color: var(--main-color);
+  border: none;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+#home {
+  background: linear-gradient(160deg, var(--main-color), #000);
+  height: 100vh;
+  width: 100%;
+}
+
+/* Profile */
+
+#member {
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.profile img {
+  width: 200px;
+}
+
+.profile h3 {
+  padding: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
