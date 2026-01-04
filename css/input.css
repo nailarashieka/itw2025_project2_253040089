@@ -63,7 +63,7 @@ body {
   width: 100%;
 }
 
-/* Profile */
+/* Members */
 
 #member {
   padding: 50px 0;
@@ -84,4 +84,139 @@ h2 {
   font-weight: 500;
   color: #fff;
   text-align: center;
+}
+
+/* Profile */
+
+#profile {
+  padding: 50px 0;
+  background: linear-gradient(160deg, var(--main-color), #000);
+  height: 150vh;
+  width: 100%;
+}
+
+.group video {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+  font-size: 15px;
+  color: #fff;
+  text-align: justify;
+  padding: 20px;
+  background: #380f17;
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* album */
+
+#album {
+  padding: 50px 0;
+}
+
+.album-box {
+  position: relative;
+  background-color: #78161d80;
+  border-radius: 15px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+
+.album-box::before {
+  content: "Enhypen";
+  position: absolute;
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.album-box:hover::before {
+  opacity: 0.7;
+}
+
+.album-box::after {
+  content: "Album";
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  top: 280px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.album-box:hover::after {
+  opacity: 0.7;
+}
+
+.album-name {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 20px;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 50px);
+}
+
+.album-box:hover .album-name {
+  top: 10px;
+  opacity: 1;
+}
+
+.album-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.album-box:hover .album-btn {
+  opacity: 1;
+  bottom: 10px;
+}
+
+.album-img {
+  width: 75%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 100px);
+  transition: 0.5s;
+}
+
+.album-box:hover .album-img {
+  transform: translate3d(-50%, -52%, 100px) scale(1.2);
+}
+
+/* Contact */
+
+#contact {
+  padding: 50px 0;
+  background: linear-gradient(160deg, var(--main-color), #000);
+  height: 150vh;
+  width: 100%;
+  color: #fff;
+}
+
+.contact-btn {
+  background-color: #631a29;
+  color: #fff;
+  font-weight: bold;
 }
