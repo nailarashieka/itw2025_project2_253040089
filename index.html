@@ -108,7 +108,7 @@
                 <img
                   src="img/member/uwon.jpg"
                   class="rounded-circle"
-                  alt="..."
+                  alt="jungwon"
                 />
                 <h3>Yang Jungwon</h3>
             </div>
@@ -229,7 +229,7 @@
               <h2>Enhypen Album</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="row mt-5">
             <div class="col-md-4 col-lg-4 mb-3">
               <div class="album-box">
                 <h4 class="album-name">Border : Day One</h4>
@@ -313,12 +313,17 @@
               <h2>Contact</h2>
             </div>
           </div>
-          <div class="row justify-content-center">
+          <div class="row mt-5 justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible d-none fade show my-alert" role="alert">
+              <strong>Well Done!</strong> Pesan anda sudah kami terima.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <form name="En-contact-form">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
                 <input
+                name="nama"
                   type="text"
                   class="form-control"
                   id="name"
@@ -328,6 +333,7 @@
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input
+                name="email"
                   type="email"
                   class="form-control"
                   id="email"
@@ -336,14 +342,21 @@
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" name="pesan" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-Danger contact-btn">Submit</button>
+              <button type="submit" class="btn btn-Danger contact-btn btn-kirim">Submit</button>
+
+              <button class="btn Loading d-none btn-loading"  type="button" disabled>
+              <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
             </form>
           </div>
         </div>
         </div>
        </section>
+
+       <!-- Footer -->
 
     <script>
       feather.replace();
@@ -360,5 +373,27 @@
 		    speed: 400
 	  });
   </script>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbym8be_j0yYcmdJtmowsg9rxRY0bLCdFm2GoVE02U6b6BpTMg1pXyNSEwQzoILf3lBS8g/exec'
+  const form = document.forms['En-contact-form'];
+  const btnSubmit =document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector ('.btn-loading');
+  const MyAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    btnLoading.classList.toggle('d-none');
+    btnSubmit.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        btnLoading.classList.toggle('d-none');
+        btnSubmit.classList.toggle('d-none');
+        MyAlert.classList.toggle('d-none');
+        form.reset();
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
   </body>
 </html>
