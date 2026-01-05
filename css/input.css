@@ -33,6 +33,11 @@ body {
   z-index: 1;
 }
 
+button a {
+  text-decoration: none;
+  color: #380f17;
+}
+
 .home-tagline h1 {
   color: #fff;
   font-weight: 700;
@@ -91,7 +96,6 @@ h2 {
 #profile {
   padding: 50px 0;
   background: linear-gradient(160deg, var(--main-color), #000);
-  height: 150vh;
   width: 100%;
 }
 
@@ -210,7 +214,6 @@ h2 {
 #contact {
   padding: 50px 0;
   background: linear-gradient(160deg, var(--main-color), #000);
-  height: 150vh;
   width: 100%;
   color: #fff;
 }

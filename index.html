@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Bogle&family=Bitcount+Grid+Single:wght@100..900&family=DM+Serif+Display:ital@0;1&family=Momo+Trust+Display&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/input.css" />
     <link rel="icon" href="img/logo.png" type="image/x-icon" />
   </head>
@@ -80,7 +81,7 @@
               kuat, dan visual ikonik yang merepresentasikan perjalanan
               identitas dan kebersamaan.
             </p>
-            <button class="button-primary">Meet Enhypen</button>
+            <button class="button-primary prof-btn"><a href="#profile">Meet Enhypen</a></button>
           </div>
         </div>
 
@@ -96,14 +97,14 @@
     <section id="member">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
+          <div class="col-12 text-center" data-aos="fade-right" data-aos-duration="1000">
             <h2>Enhypen Member</h2>
           </div>
         </div>
 
         <div class="row row-cols-auto mt-5 p-5 gap-3 justify-content-center">
           <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1000">
               <div class="profile">
                 <img
                   src="img/member/uwon.jpg"
@@ -116,7 +117,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1100">
               <div class="profile">
                 <img
                   src="img/member/hee.jpg"
@@ -129,7 +130,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1200">
               <div class="profile">
                 <img
                   src="img/member/jay.jpg"
@@ -142,7 +143,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1300">
               <div class="profile">
                 <img
                   src="img/member/jake.jpg"
@@ -155,7 +156,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1400">
               <div class="profile">
                 <img
                   src="img/member/hoon.jpg"
@@ -168,7 +169,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1500">
               <div class="profile">
                 <img
                   src="img/member/suno.jpg"
@@ -181,7 +182,7 @@
         </div>
 
         <div class="col">
-            <div class="mem-profile">
+            <div class="mem-profile" data-aos="fade-up" data-aos-duration="1600">
               <div class="profile">
                 <img
                   src="img/member/riki.jpg"
@@ -199,7 +200,7 @@
      <section id="profile">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
+          <div class="col-12 text-center" data-aos="fade-up" data-aos-duration="1000">
             <h2>Group Profile</h2>
           </div>
         </div>
@@ -207,12 +208,12 @@
         <div class="row mt-5">
           <div class="col">
             <div class="group-prof d-flex justify-content-center align-items-center">
-              <div class="group">
+              <div class="group" data-aos="fade-left" data-aos-duration="1000">
                 <video src="img/group/ot7.mp4" class="object-fit-scale" autoplay muted loop controls></video>
               </div>
             </div>
 
-            <div class="desc mt-5 ">
+            <div class="desc mt-5 " data-aos="fade-up" data-aos-duration="1000">
               <p><span class="fw-bold">ENHYPEN</span> adalah boy group asal Korea Selatan yang dibentuk melalui survival show I-LAND dan debut pada 30 November 2020 di bawah BELIFT LAB. Grup ini terdiri dari 7 anggota: Jungwon, Heeseung, Jay, Jake, Sunghoon, Sunoo, dan Ni-ki.
                   Nama ENHYPEN memiliki makna “hyphen (-)” yang melambangkan koneksi, pertumbuhan, dan hubungan antara para anggota serta dengan penggemar yang disebut ENGENE. ENHYPEN dikenal dengan konsep musik yang kuat, storytelling yang konsisten, serta performa panggung yang energik dan presisi.</p>
             </div>
@@ -360,6 +361,10 @@
 
     <script>
       feather.replace();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
